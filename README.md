@@ -57,7 +57,7 @@ rave = RaveRuby.new("YOUR_RAVE_LIVE_PUBLIC_KEY", "YOUR_RAVE_LIVE_SECRET_KEY", tr
 
 ## Rave Objects
 
-- [Account.new(rave)](#accountnewrave)
+- [RaveAccount.new(rave)](#accountnewrave)
 - [Card.new(rave)](#cardnewrave)
 - [Preauth.new(rave)](#preauthnewrave)
 - [MobileMoney.new(rave)](#mobilemoneynewrave)
@@ -71,7 +71,7 @@ rave = RaveRuby.new("YOUR_RAVE_LIVE_PUBLIC_KEY", "YOUR_RAVE_LIVE_SECRET_KEY", tr
 - [Ussd.new(rave)](#ussdnewrave)
 - [ListBanks.new(rave)](#listbanksnewrave)
 
-## `Account.new(rave)`
+## `RaveAccount.new(rave)`
 
 To perform account transactions, instantiate the account object and pass rave object as its argument.
 
@@ -199,7 +199,7 @@ Full sample response returned if a transaction is successfully verified:
 
 If a transaction couldn't be verified successfully, `error` and `transaction_complete` would both come as `false`.
 
-#### Full Account Transaction Flow:
+#### Full RaveAccount Transaction Flow:
 
 ```ruby
 require 'rave_ruby'
@@ -224,7 +224,7 @@ payload = {
     "device_fingerprint" => "69e6b7f0b72037aa8428b70fbe03986c"
 }
 
-charge_account = Account.new(rave)
+charge_account = RaveAccount.new(rave)
 
 response = charge_account.initiate_charge(payload)
 print response
