@@ -1,7 +1,7 @@
 require_relative "base/charge_base.rb"
 require 'json'
 
-class Account < ChargeBase
+class RaveAccount < ChargeBase
 
 # method to initiate the account payment 
 

@@ -20,10 +20,10 @@ payload = {
   "device_fingerprint" => "69e6b7f0b72037aa8428b70fbe03986c"
 }
 
-RSpec.describe Account do
+RSpec.describe RaveAccount do
 
   rave = RaveRuby.new(test_public_key, test_secret_key)
-  charge_account =  Account.new(rave)
+  charge_account =  RaveAccount.new(rave)
 
   context "when a merchant tries to charge a customers account" do
 
